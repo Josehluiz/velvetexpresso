@@ -1,0 +1,193 @@
+@font-face {
+    font-family: Cinzel;
+    src: url(fonte/Cinzel-VariableFont_wght.ttf);
+    font-weight: 800; 
+}
+
+@font-face {
+    font-family: Cinzel;
+    src: url(fonte/Cinzel-VariableFont_wght.ttf);
+    font-weight: 600; 
+}
+
+@font-face {
+    font-family: Cinzel;
+    src: url(fonte/Cinzel-VariableFont_wght.ttf);
+    font-weight: 200; 
+}
+
+@font-face {
+    font-family: Cinzel;
+    src: url(fonte/Cinzel-VariableFont_wght.ttf);
+    font-weight: 500;
+}
+
+*
+{
+    margin: 0%;
+}
+
+body 
+{
+    background-color: #F2EBDC;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    font-family: 'Cinzel';
+    font-weight: 800;
+    color: #4F3739;
+}
+
+header 
+{
+    position: static;
+    margin-top: 6vh;
+}
+
+header nav
+{
+    display: flex;
+    align-items: center; /*não deu certo p alinhar o texto do lado da img*/
+}
+
+header nav ul 
+{
+    display: flex;
+    list-style-type: none; /*p tirar o marcador da lista*/
+}
+
+header nav ul li 
+{
+    display: inline;
+}
+
+.experiencia 
+{
+    float: right;
+    margin-top: 6.5vh;
+    margin-left: 1.5vw;
+    display: flex;
+}
+
+.icone
+{
+    display: flex;
+    margin-left: 53vw;
+    font-size: xx-large;
+    margin-top: 4vh;
+}
+
+.menu li a 
+{
+    font-size: x-large;
+}
+
+
+header nav ul li a
+{
+    text-decoration: none;
+    color: #4F3739;
+    font-size: 110%;
+
+}
+
+header nav ul li a img 
+{
+    height: 16vh;
+    width: 8vw;
+    display: flex;
+}
+
+.jacquin
+{
+    margin-top: 55vh;
+    margin-left: 50vw;
+    font-size: 400%;
+    color:#4F3739;
+    font-weight: 600;
+}
+
+.linha2
+{
+    margin-left: -10vw;
+}
+
+.linha3
+{
+    margin-left: 18vw;
+}
+
+/*Catalogo abaixo*/
+
+.frase_autor
+{
+    text-align: left;
+    margin-left: 5vw;
+    margin-top: 10vh;
+    font-size: 450%;
+    font-weight: 500;
+}
+
+.autor
+{
+    margin-left: 50vw;
+}
+
+/*carrosel*/
+@keyframes carousel{
+    0%    { left:0; }
+    11%   { left:0; }
+    12.5% { left:-100%; }
+    23.5% { left:-100%; }
+    25%   { left:-200%; }
+    36%   { left:-200%; }
+    37.5% { left:-300%; }
+    48.5% { left:-300%; }
+    50%   { left:-400%; }
+    61%   { left:-400%; }
+    62.5% { left:-300%; }
+    73.5% { left:-300%; }
+    75%   { left:-200%; }
+    86%   { left:-200%; }
+    87.5% { left:-100%; }
+    98.5% { left:-100%; }
+    100%  { left:0; }
+    /* daqui: http://csswizardry.com/2011/10/fully-fluid-responsive-css-carousel/ */
+}
+@keyframes go{
+    0%    {  }
+    100%    { left:-300%; }
+}
+@keyframes back{
+    0%    { left:0; }
+    100%  { left:100%; }
+}
+.carousel{
+    margin-top: 5vh;
+    width:97vw; 
+    overflow:hidden; 
+    height: 100vh;}
+.paineis{
+    width:500% /* article w * 5 */; 
+    overflow:hidden;  
+    height:100vh; 
+    animation:carousel 30s infinite; position:relative;}
+article{
+    float:left; 
+    width:20%;} 
+img{
+    height:65vh; 
+    width:97vw;
+
+}
+input[type=checkbox]:checked ~ .paineis{animation-play-state:paused; animation: go 10s}
+
+/*carrosel acaba aqui*/
+
+.descricao_cat
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: justify;
+    margin-top: 30vh;
+    margin-left: 3.5vw;
+}
